@@ -17,63 +17,71 @@ def expected_score(rating_a, rating_b):
 # Function to update Elo ratings
 def update_elo_rating(rating_a, rating_b, score_a, score_b, k_factor):
     expected_a = expected_score(rating_a, rating_b)
-    expected_b = 1 - expected_a  # The expected score for player B
+    expected_b = 1 - expected_a
     new_rating_a = rating_a + k_factor * (score_a - expected_a)
     new_rating_b = rating_b + k_factor * (score_b - expected_b)
     return new_rating_a, new_rating_b
 
 # Main function to process the Elo ranking
 def calculate_elo_ranking(file_path):
-    # Read the input file
     data = pd.read_csv(file_path)
+    player_stats = {}
 
-    # Dictionary to keep track of player ratings and number of games played
-    player_ratings = {}
-    player_games = {}
+    for _, row in data.iterrows():
+        player_1, player_2 = row['player_1'], row['player_2']
+        result_1, result_2 = row['player_1_result'], row['player_2_result']
 
-    # Process each game in the data
-    for index, row in data.iterrows():
-        player_1 = row['player_1']
-        player_2 = row['player_2']
-        result_1 = row['player_1_result']
-        result_2 = row['player_2_result']
+        for player in [player_1, player_2]:
+            if player not in player_stats:
+                player_stats[player] = {
+                    'Rating': INITIAL_RATING,
+                    'Games Played': 0,
+                    'Wins': 0,
+                    'Losses': 0
+                }
 
-        # Initialize ratings and games if players are new
-        if player_1 not in player_ratings:
-            player_ratings[player_1] = INITIAL_RATING
-            player_games[player_1] = 0
-        if player_2 not in player_ratings:
-            player_ratings[player_2] = INITIAL_RATING
-            player_games[player_2] = 0
-
-        # Calculate the K-factor for each player
-        k_1 = calculate_k_factor(player_games[player_1])
-        k_2 = calculate_k_factor(player_games[player_2])
-
-        # Use the average K-factor for the game
+        k_1 = calculate_k_factor(player_stats[player_1]['Games Played'])
+        k_2 = calculate_k_factor(player_stats[player_2]['Games Played'])
         k_combined = (k_1 + k_2) / 2
 
-        # Update the Elo ratings
         new_rating_1, new_rating_2 = update_elo_rating(
-            player_ratings[player_1],
-            player_ratings[player_2],
+            player_stats[player_1]['Rating'],
+            player_stats[player_2]['Rating'],
             result_1,
             result_2,
             k_combined
         )
 
         # Update player ratings and game count
-        player_ratings[player_1] = new_rating_1
-        player_ratings[player_2] = new_rating_2
-        player_games[player_1] += 1
-        player_games[player_2] += 1
+        player_stats[player_1]['Rating'] = new_rating_1
+        player_stats[player_2]['Rating'] = new_rating_2
+        player_stats[player_1]['Games Played'] += 1
+        player_stats[player_2]['Games Played'] += 1
 
-    # Output the final Elo ratings for all players
-    final_ratings = pd.DataFrame.from_dict(player_ratings, orient='index', columns=['Rating'])
-    final_ratings = final_ratings.sort_values(by='Rating', ascending=False)
-    return final_ratings
+        # Update wins and losses
+        if result_1 == 1:
+            player_stats[player_1]['Wins'] += 1
+            player_stats[player_2]['Losses'] += 1
+        else:
+            player_stats[player_2]['Wins'] += 1
+            player_stats[player_1]['Losses'] += 1
+
+    # Calculate win rate
+    for player, stats in player_stats.items():
+        total_games = stats['Games Played']
+        stats['Win Rate'] = (stats['Wins'] / total_games) * 100 if total_games > 0 else 0
+
+    # Convert the final stats to a DataFrame
+    final_stats = pd.DataFrame.from_dict(player_stats, orient='index')
+    final_stats = final_stats.sort_values(by='Rating', ascending=False)
+    final_stats = final_stats[['Rating', 'Games Played', 'Wins', 'Losses', 'Win Rate']]
+    return final_stats
 
 # Example usage
-file_path = 'ping_pong_matches.csv'  # Replace with the path to your input file
+file_path = 'input/ping_pong_matches.csv'  # Replace with the path to your input file
 final_rankings = calculate_elo_ranking(file_path)
-print(final_rankings)
+
+# Save the final rankings to a CSV file with the index as a "Player" column
+final_rankings.reset_index(inplace=True)
+final_rankings.rename(columns={'index': 'Player'}, inplace=True)
+final_rankings.to_csv('output/ping_pong_ranking.csv', index=False)
