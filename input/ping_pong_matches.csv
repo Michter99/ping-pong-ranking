@@ -1,63 +1,63 @@
-player_1,player_2,player_1_result,player_2_result
-Fernando Rojas Rodríguez,Gustave Pruneda Castillo,1,0
-Gustave Pruneda Castillo,Fernando Rojas Rodríguez,1,0
-Gustave Pruneda Castillo,Fernando Rojas Rodríguez,1,0
-Fernando Rojas Rodríguez,Rodrigo Bulhosen Azuara,1,0
-Fernando Rojas Rodríguez,Rodrigo Bulhosen Azuara,1,0
-Fernando Rojas Rodríguez,Juan Peláez Villa,1,0
-Fernando Rojas Rodríguez,Juan Peláez Villa,1,0
-Fernando Ogarrio Ramos,Gabriel Reynoso Romero,1,0
-Fernando Ogarrio Ramos,Gabriel Reynoso Romero,1,0
-Fernando Rojas Rodríguez,Gabriel Reynoso Romero,1,0
-Gabriel Reynoso Romero,Fernando Rojas Rodríguez,1,0
-Gabriel Reynoso Romero,Fernando Rojas Rodríguez,1,0
-Rodrigo Bulhosen Azuara,Juan Peláez Villa,1,0
-Rodrigo Bulhosen Azuara,Juan Peláez Villa,1,0
-Gustave Pruneda Castillo,Fernando Ogarrio Ramos,1,0
-Gustave Pruneda Castillo,Fernando Ogarrio Ramos,1,0
-Fernando Rojas Rodríguez,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Laya Nohra,1,0
-Fernando Rojas Rodríguez,Laya Nohra,1,0
-Laya Nohra,Fernando Rojas Rodríguez,1,0
-Laya Nohra,Alan González Vite,1,0
-Laya Nohra,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Miguel Richter,1,0
-Fernando Rojas Rodríguez,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Alan González Vite,1,0
-Rodrigo Bulhosen Azuara,Alan González Vite,1,0
-Alan González Vite,Rodrigo Bulhosen Azuara,1,0
-Rodrigo Bulhosen Azuara,Miguel Richter,1,0
-Miguel Richter,Alan González Vite,1,0
-David Veloz,Fernando Rojas Rodríguez,1,0
-David Veloz,Fernando Rojas Rodríguez,1,0
-David Veloz,Fernando Rojas Rodríguez,1,0
-David Veloz,Fernando Rojas Rodríguez,1,0
-David Veloz,Alan González Vite,1,0
-David Veloz,Miguel Richter,1,0
-Miguel Richter,Fernando Rojas Rodríguez,1,0
-Miguel Richter,Alan González Vite,1,0
-Miguel Richter,Alan González Vite,1,0
-Miguel Richter,Alan González Vite,1,0
-Laucha,Fernando Rojas Rodríguez,1,0
-Laucha,Gustave Pruneda Castillo,0,1
-Laya Nohra,Miguel Richter,1,0
-Laya Nohra,Miguel Richter,1,0
-Laya Nohra,Alan González Vite,1,0
-Laya Nohra,Alan González Vite,1,0
-Laya Nohra,Alan González Vite,0,1
-Miguel Richter,Alan González Vite,0,1
-Miguel Richter,Alan González Vite,1,0
-Miguel Richter,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Fernando Ogarrio Ramos,0,1
-Miguel Richter,Fernando Ogarrio Ramos,0,1
-Miguel Richter,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Alan González Vite,1,0
-Fernando Rojas Rodríguez,Fernando Ogarrio Ramos,0,1
-Miguel Richter,Fernando Ogarrio Ramos,0,1
-Miguel Richter,Alan González Vite,1,0
-Alan González Vite,Fernando Ogarrio Ramos,0,1
-Fernando Rojas Rodríguez,Miguel Richter,1,0
+game_date,player_1,player_2,player_1_result,player_2_result
+2024-09-12,Fernando Rojas Rodríguez,Gustave Pruneda Castillo,1,0
+2024-09-12,Gustave Pruneda Castillo,Fernando Rojas Rodríguez,1,0
+2024-09-12,Gustave Pruneda Castillo,Fernando Rojas Rodríguez,1,0
+2024-09-12,Fernando Rojas Rodríguez,Rodrigo Bulhosen Azuara,1,0
+2024-09-12,Fernando Rojas Rodríguez,Rodrigo Bulhosen Azuara,1,0
+2024-09-12,Fernando Rojas Rodríguez,Juan Peláez Villa,1,0
+2024-09-12,Fernando Rojas Rodríguez,Juan Peláez Villa,1,0
+2024-09-12,Fernando Ogarrio Ramos,Gabriel Reynoso Romero,1,0
+2024-09-12,Fernando Ogarrio Ramos,Gabriel Reynoso Romero,1,0
+2024-09-12,Fernando Rojas Rodríguez,Gabriel Reynoso Romero,1,0
+2024-09-12,Gabriel Reynoso Romero,Fernando Rojas Rodríguez,1,0
+2024-09-12,Gabriel Reynoso Romero,Fernando Rojas Rodríguez,1,0
+2024-09-12,Rodrigo Bulhosen Azuara,Juan Peláez Villa,1,0
+2024-09-12,Rodrigo Bulhosen Azuara,Juan Peláez Villa,1,0
+2024-09-12,Gustave Pruneda Castillo,Fernando Ogarrio Ramos,1,0
+2024-09-19,Gustave Pruneda Castillo,Fernando Ogarrio Ramos,1,0
+2024-09-19,Fernando Rojas Rodríguez,Alan González Vite,1,0
+2024-09-19,Fernando Rojas Rodríguez,Alan González Vite,1,0
+2024-09-19,Fernando Rojas Rodríguez,Laya Nohra,1,0
+2024-09-19,Fernando Rojas Rodríguez,Laya Nohra,1,0
+2024-09-19,Laya Nohra,Fernando Rojas Rodríguez,1,0
+2024-09-19,Laya Nohra,Alan González Vite,1,0
+2024-09-19,Laya Nohra,Alan González Vite,1,0
+2024-09-25,Fernando Rojas Rodríguez,Miguel Richter,1,0
+2024-09-25,Fernando Rojas Rodríguez,Alan González Vite,1,0
+2024-09-25,Fernando Rojas Rodríguez,Alan González Vite,1,0
+2024-09-25,Fernando Rojas Rodríguez,Alan González Vite,1,0
+2024-09-25,Fernando Rojas Rodríguez,Alan González Vite,1,0
+2024-09-25,Rodrigo Bulhosen Azuara,Alan González Vite,1,0
+2024-09-25,Alan González Vite,Rodrigo Bulhosen Azuara,1,0
+2024-09-25,Rodrigo Bulhosen Azuara,Miguel Richter,1,0
+2024-09-25,Miguel Richter,Alan González Vite,1,0
+2024-09-25,Laucha,Fernando Rojas Rodríguez,1,0
+2024-09-25,Laucha,Gustave Pruneda Castillo,0,1
+2024-09-25,Laya Nohra,Miguel Richter,1,0
+2024-09-25,Laya Nohra,Miguel Richter,1,0
+2024-09-25,Laya Nohra,Alan González Vite,1,0
+2024-09-25,Laya Nohra,Alan González Vite,1,0
+2024-09-25,Laya Nohra,Alan González Vite,0,1
+2024-10-03,Miguel Richter,Fernando Rojas Rodríguez,1,0
+2024-10-03,Miguel Richter,Alan González Vite,1,0
+2024-10-03,Miguel Richter,Alan González Vite,1,0
+2024-10-03,Miguel Richter,Alan González Vite,1,0
+2024-10-03,Miguel Richter,Alan González Vite,0,1
+2024-10-03,Miguel Richter,Alan González Vite,1,0
+2024-10-03,Miguel Richter,Alan González Vite,1,0
+2024-10-04,David Veloz,Fernando Rojas Rodríguez,1,0
+2024-10-04,David Veloz,Fernando Rojas Rodríguez,1,0
+2024-10-04,David Veloz,Fernando Rojas Rodríguez,1,0
+2024-10-04,David Veloz,Fernando Rojas Rodríguez,1,0
+2024-10-04,David Veloz,Alan González Vite,1,0
+2024-10-04,David Veloz,Miguel Richter,1,0
+2024-10-10,Fernando Rojas Rodríguez,Alan González Vite,1,0
+2024-10-10,Fernando Rojas Rodríguez,Fernando Ogarrio Ramos,0,1
+2024-10-10,Miguel Richter,Fernando Ogarrio Ramos,0,1
+2024-10-10,Miguel Richter,Alan González Vite,1,0
+2024-10-10,Fernando Rojas Rodríguez,Alan González Vite,1,0
+2024-10-10,Fernando Rojas Rodríguez,Fernando Ogarrio Ramos,0,1
+2024-10-10,Miguel Richter,Fernando Ogarrio Ramos,0,1
+2024-10-10,Miguel Richter,Alan González Vite,1,0
+2024-10-10,Alan González Vite,Fernando Ogarrio Ramos,0,1
+2024-10-10,Fernando Rojas Rodríguez,Miguel Richter,1,0

@@ -30,6 +30,7 @@ def calculate_elo_ranking(file_path):
     for _, row in data.iterrows():
         player_1, player_2 = row['player_1'], row['player_2']
         result_1, result_2 = row['player_1_result'], row['player_2_result']
+        game_date = row['game_date']
 
         for player in [player_1, player_2]:
             if player not in player_stats:
@@ -37,7 +38,8 @@ def calculate_elo_ranking(file_path):
                     'Rating': INITIAL_RATING,
                     'Games Played': 0,
                     'Wins': 0,
-                    'Losses': 0
+                    'Losses': 0,
+                    'Last Played Date': None
                 }
 
         k_1 = calculate_k_factor(player_stats[player_1]['Games Played'])
@@ -66,6 +68,10 @@ def calculate_elo_ranking(file_path):
             player_stats[player_2]['Wins'] += 1
             player_stats[player_1]['Losses'] += 1
 
+        # Update last played date
+        player_stats[player_1]['Last Played Date'] = game_date
+        player_stats[player_2]['Last Played Date'] = game_date
+
     # Calculate win rate
     for player, stats in player_stats.items():
         total_games = stats['Games Played']
@@ -74,11 +80,11 @@ def calculate_elo_ranking(file_path):
     # Convert the final stats to a DataFrame
     final_stats = pd.DataFrame.from_dict(player_stats, orient='index')
     final_stats = final_stats.sort_values(by='Rating', ascending=False)
-    final_stats = final_stats[['Rating', 'Games Played', 'Wins', 'Losses', 'Win Rate']]
+    final_stats = final_stats[['Rating', 'Games Played', 'Wins', 'Losses', 'Win Rate', 'Last Played Date']]
     return final_stats
 
-# Example usage
-file_path = 'input/ping_pong_matches.csv'  # Replace with the path to your input file
+# Example usage with the provided input
+file_path = 'input/ping_pong_matches.csv'  # This will be replaced with the actual file path
 final_rankings = calculate_elo_ranking(file_path)
 
 # Save the final rankings to a CSV file with the index as a "Player" column
