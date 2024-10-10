@@ -77,10 +77,13 @@ def calculate_elo_ranking(file_path):
         total_games = stats['Games Played']
         stats['Win Rate'] = (stats['Wins'] / total_games) * 100 if total_games > 0 else 0
 
-    # Convert the final stats to a DataFrame
+    # Convert the final stats to a DataFrame and round to two decimal places
     final_stats = pd.DataFrame.from_dict(player_stats, orient='index')
     final_stats = final_stats.sort_values(by='Rating', ascending=False)
     final_stats = final_stats[['Rating', 'Games Played', 'Wins', 'Losses', 'Win Rate', 'Last Played Date']]
+    final_stats['Rating'] = final_stats['Rating'].round(2)
+    final_stats['Win Rate'] = final_stats['Win Rate'].round(2)
+    
     return final_stats
 
 # Example usage with the provided input
